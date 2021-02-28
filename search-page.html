@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiRock</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+
+<body>
+
+    <header id="main-header">
+        <div class="desktop-wrapper">
+
+            <a href="index.html" class="logo"><img src="imagenes/logo-wikirock-white.png" alt="logo wikirock"></a>
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="about.html">NOSOTROS</a></li>
+                    <li><a class="actual-page" href="search-page.html">BUSCAR</a></li>
+                    <div id="favoritos"> 
+                        <img src="imagenes/icon-bolt.png" class="logo-bolt-icon">
+                        <img src="imagenes/heart-icon.png" class="logo-heart-icon">
+                        <li><a href="favorites.html"> Mis favoritos</a></li>
+                    </div>    
+                </ul>
+            </nav>
+
+            <a href="search-page.html" class="lupa"><img src="imagenes/search-white.svg" alt="buscador wikirock"></a>
+
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section id="content">
+            <div id="breadcrumb-container">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Inicio ></a></li>
+                    <li>Buscar</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="search-section">
+            <form id="formulario">
+                <label for="nombre"> ¿Sobre qué artista quieres saberlo todo? </label>
+                <input type="text" name="nombre" id="nombre">
+                <input class="submit-button" type="submit" value="¡VAMOS!">
+            </form>
+            <div id="search-results">
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="functions.js" type="text/javascript"></script>
+
+
+
+    <footer>
+
+        <div class="footer-first">
+            <div class="footer-logo-container">
+                <img class="footer-logo" src="imagenes/logo-wikirock-white.png">
+            </div>
+            <div class="contact-info">
+                <p>Alicia Delgado Cabellos </p>
+                <p>BBK BOOTCAMP 2021</p>
+                <p> Paseo Uribitarte, Bilbao</p>
+                <a class="link" href="mailto:adcabellos@gmail.com">alicia@bbkbootcamp</a>
+            </div>
+            <div class="footer-info">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum natus, labore nemo
+                    omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsa facere eaque doloremque enim
+                    odio. . </p>
+            </div>
+
+
+        </div>
+
+        <div class="footer-last">
+            <p class="footer-font">WikiRock © The ultimate page for melomaniacs</p>
+        </div>
+
+    </footer>
+ 
+
+</body>
+
+</html>

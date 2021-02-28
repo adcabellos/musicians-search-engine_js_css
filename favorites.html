@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiRock</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+
+<header id="main-header"> 
+    <div class="desktop-wrapper"> 
+    
+        <a href="index.html" class="logo"><img src="imagenes/logo-wikirock-white.png" alt="logo wikirock"></a>
+
+        <nav> 
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">NOSOTROS</a></li>
+                <li><a href="search-page.html">BUSCAR</a></li>
+                <div id="favoritos"> 
+                    <img src="imagenes/icon-bolt.png" class="logo-bolt-icon">
+                    <img src="imagenes/heart-icon.png" class="logo-heart-icon">    
+                    <li><a class="actual-page" href="favorites.html"> Mis favoritos</a></li>
+                </div> 
+
+            </ul>
+        </nav>
+       
+        <a href="search-page.html" class="lupa"><img src="imagenes/search-white.svg" alt="buscador wikirock"></a>
+        
+    </div>
+</header>
+
+<main id="main">
+
+    <section id="content">
+        <div id="breadcrumb-container">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Inicio ></a></li>
+                <li>Favoritos</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="search-section-favorites"> 
+    <div id="favoritos-container">
+        
+
+    </div>
+
+</section>
+
+</main>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="functions.js" type="text/javascript"></script>
+
+<script>
+
+
+
+if (cogerDatosLocalStorage("favoritos")!= null) {
+
+    mostrarDatosLocalStorage ("favoritos");
+
+} else {
+
+    let mensajeParrafo = document.createElement ("p");
+    mensajeParrafo.textContent = "¡Vaya! Parece que todavía no tienes nada guardado en tu lista. ¿Te animas a buscar?"; 
+    mensajeParrafo.className = "artistname-format-none";
+    document.querySelector("#favoritos-container").appendChild(mensajeParrafo);
+
+    let buttonSearch = document.createElement ("a");
+    buttonSearch.textContent = "¡Vamos!"
+    buttonSearch.href ="search-page.html";
+    buttonSearch.className = "button-search-none";
+    document.querySelector("#favoritos-container").appendChild(buttonSearch);
+
+             
+    
+}
+
+
+</script>
+
+
+
+<footer>
+
+    <div class="footer-first">
+        <div class="footer-logo-container">
+            <img class="footer-logo" src="imagenes/logo-wikirock-white.png">
+        </div>
+        <div class="contact-info">
+            <p>Alicia Delgado Cabellos </p>
+            <p>BBK BOOTCAMP 2021</p>
+            <p> Paseo Uribitarte, Bilbao</p>
+            <a class="link" href="mailto:adcabellos@gmail.com">alicia@bbkbootcamp</a>
+        </div>
+        <div class="footer-info">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum natus, labore nemo
+                omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsa facere eaque doloremque enim
+                odio. . </p>
+        </div>
+
+
+    </div>
+
+    <div class="footer-last">
+        <p class="footer-font">WikiRock © The ultimate page for melomaniacs</p>
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
